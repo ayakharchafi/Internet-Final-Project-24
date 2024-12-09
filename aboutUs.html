@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PurelyAya - About Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-title">PurelyAya</div>
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item">HOME</a>
+          <!-- Link to the main page -->
+          <div class="dropdown">
+            <a href="#" class="nav-item">BEST OF BEAUTY</a>
+            <div class="dropdown-content">
+              <a href="beautyAwards.html">BEAUTY AWARDS</a>
+              <a href="trendyProducts.html">TRENDY PRODUCTS</a>
+              <a href="beautyTips.html">BEAUTY TIPS</a>
+            </div>
+          </div>
+          <a href="skin.html" class="nav-item">SKIN</a>
+          <a href="makeup.html" class="nav-item">MAKEUP</a>
+          <a href="hair.html" class="nav-item">HAIR</a>
+          <a href="aboutUs.html" class="nav-item">ABOUT</a>
+        </nav>
+        <a href="signIn.html" class="button-SignIn">Sign In</a>
+        <a href="signUp.html" class="button-SignUp">Sign Up</a>
+      </div>
+    </header>
+    <main class="about-main">
+      <!-- Section 1: Our Story -->
+      <section class="about-our-story">
+        <div class="about-story-content">
+          <div class="about-story-text-container">
+            <h2 class="about-story-heading">Our Story</h2>
+            <p class="about-story-text">
+              PurelyAya started as a small beauty blog with a mission to inspire
+              confidence through makeup, skincare, and haircare tips. What began
+              as a personal passion has grown into a trusted platform, offering
+              expert recommendations and honest reviews to help everyone feel
+              beautiful and empowered in their own skin.
+            </p>
+          </div>
+          <div class="about-story-image-container">
+            <img
+              class="story-image"
+              src="images/story.jpg"
+              alt="Our Story Image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Our Mission -->
+      <section class="about-our-mission">
+        <div class="about-mission-content">
+          <h2 class="about-mission-heading">
+            Elevate with PurelyAya: Words that Inspire
+          </h2>
+          <p id="quote">Your quote will appear here...</p>
+          <p id="author"></p>
+          <button id="newQuote">Get New Quote</button>
+          <br />
+          <br />
+          Inspirational quotes provided by
+          <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
+        </div>
+      </section>
+      <script src="script.js"></script>
+
+      <!-- Section 3: Location Map -->
+      <section class="about-location-map">
+        <div class="about-map-container">
+          <h2 class="about-map-title">Visit Us</h2>
+          <iframe
+            width="500"
+            height="300"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=306%20rue%20Laurin+(PurelyAya%20Office)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            title="Location of PurelyAya Office"
+          >
+          </iframe>
+        </div>
+        <div class="about-hours">
+          <h1>Join Our Team!</h1>
+          <p>Check out our working hours below:</p>
+          <!-- This is going to be the days of the week and their respective open hours where in a json file i will write them and in the script i will fetch them and display them -->
+          <ul id="hours-list"></ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Left Section: Image -->
+        <div class="footer-left">
+          <img src="images/image4.jpg" alt="Logo" />
+        </div>
+
+        <!-- Center Section: Titles with Links -->
+        <div class="footer-center">
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="hair.html">Haircare</a></li>
+              <li><a href="skin.html">Skincare</a></li>
+              <li><a href="makeup.html">Makeup</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="review.html">Leave a Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 PurelyAya. All rights reserved.</p>
+        <!-- Logos at the bottom right -->
+        <div class="footer-logos">
+          <ul class="logos">
+            <li><img src="images/logos/twitter.png" alt="Logo 1" /></li>
+            <li><img src="images/logos/instagram.png" alt="Logo 2" /></li>
+            <li><img src="images/logos/facebook.png" alt="Logo 3" /></li>
+            <li><img src="images/logos/youtube.png" alt="Logo 4" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // Fetch the JSON file
+        $.getJSON("workingHours.json", function (data) {
+          let hoursList = $("#hours-list"); // Select the <ul> element
+          // Loop through the data and append it to the list
+          data.forEach((item) => {
+            let listItem = `<li><strong>${item.day}:</strong> ${item.hours}</li>`;
+            hoursList.append(listItem);
+          });
+        }).fail(function () {
+          console.error("Error fetching the working hours JSON.");
+        });
+      });
+    </script>
+  </body>
+</html>

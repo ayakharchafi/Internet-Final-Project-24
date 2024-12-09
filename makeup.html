@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PurelyAya - Makeup Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <!-- <img src="/images/logo3.png" alt="Logo" class="header-logo" />-->
+      <div class="header-title">PurelyAya</div>
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item">HOME</a>
+          <!-- Link to the main page -->
+          <div class="dropdown">
+            <a href="#" class="nav-item">BEST OF BEAUTY</a>
+            <div class="dropdown-content">
+              <a href="beautyAwards.html">BEAUTY AWARDS</a>
+              <a href="trendyProducts.html">TRENDY PRODUCTS</a>
+              <a href="beautyTips.html">BEAUTY TIPS</a>
+            </div>
+          </div>
+          <a href="skin.html" class="nav-item">SKIN</a>
+          <a href="makeup.html" class="nav-item">MAKEUP</a>
+          <a href="hair.html" class="nav-item">HAIR</a>
+          <a href="aboutUs.html" class="nav-item">ABOUT</a>
+        </nav>
+        <a href="signIn.html" class="button-SignIn">Sign In</a>
+        <a href="signUp.html" class="button-SignUp">Sign Up</a>
+      </div>
+    </header>
+    <main class="skin-main">
+      <section class="skin-page">
+        <h1>Makeup Products</h1>
+
+        <!-- Search Bar and Filters -->
+        <div class="search-filters">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            onkeyup="filterProducts()"
+          />
+          <div class="filters">
+            <label for="priceRange">Price Range:</label>
+            <select
+              class="priceRange"
+              id="priceRange"
+              onchange="filterProducts()"
+            >
+              <option value="">All Prices</option>
+              <option value="low">Low to High</option>
+              <option value="high">High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="skin-product-container" id="productList">
+          <!-- Product 1 -->
+          <article class="skin-product-item">
+            <h2>Maybelline Fit Me Matte + Poreless Foundation</h2>
+            <p>Price: $8.99</p>
+            <p>
+              <a
+                href="https://www.maybelline.ca/en-ca/all-products/face-makeup/foundation/fit-me-matte-poreless-foundation?variant=Fair+Porcelain"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product1.jpg"
+              alt="Maybelline Fit Me Foundation"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Fenty Beauty Pro Filt'r Soft Matte Longwear Foundation</h2>
+            <p>Price: $36.00</p>
+            <p>
+              <a
+                href="sephora.com/ca/en/product/pro-filtr-soft-matte-longwear-foundation-P87985432?om_mmc=ppc-GG_6572578240_76866678697_aud-2267900291666:dsa-824755876511__445613870869_9000437_c&country_switch=ca&lang=en&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOKFBQuZmCzhUYpZlBBjmf3RLL1xE8xYSh2pyv-4WzhgGjnEq7xjQARoCdP4QAvD_BwE&gclsrc=aw.ds"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product2.jpg"
+              alt="Fenty Beauty Pro Filt'r Foundation"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>NYX Professional Makeup Butter Gloss</h2>
+            <p>Price: $5.00</p>
+            <p>
+              <a
+                href="https://www.amazon.ca/NYX-PROFESSIONAL-MAKEUP-Butter-Tiramisu/dp/B00BKHDF9A?maas=maas_adg_CBA28048A83875B75B764E8AF5A5847C_afap_abs&ref_=aa_maas&tag=maas&gclsrc=aw.ds&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOLJg1xkdCpyK1KvGUfmRWZJw-br2pxIAKEgunIbtnbQPjpND34fhEhoCdX0QAvD_BwE&th=1"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img src="images/Makeup/product3.jpg" alt="NYX Butter Gloss" />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Urban Decay Naked3 Eyeshadow Palette</h2>
+            <p>Price: $54.00</p>
+            <p>
+              <a
+                href="https://www.urbandecay.ca/en/eyeshadow-palettes/naked3-eyeshadow-palette/409.html"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product4.jpg"
+              alt="Urban Decay Naked3 Palette"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Charlotte Tilbury Pillow Talk Lipstick</h2>
+            <p>Price: $34.00</p>
+            <p>
+              <a
+                href="https://www.charlottetilbury.com/ca/products/makeup/collections/pillow-talk?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOESqX4_TZNdIOeKKHAMYDfa4gnthRtt6PcxHmLDDu46AyIOwM5DYMRoCt6QQAvD_BwE&gclsrc=aw.ds"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product5.jpg"
+              alt="Charlotte Tilbury Pillow Talk Lipstick"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>NARS Radiant Creamy Concealer</h2>
+            <p>Price: $32.00</p>
+            <p>
+              <a
+                href="https://www.narscosmetics.ca/CA/radiant-creamy-concealer/999NACRCC0001.html?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOAivKF6tWk7loDYwEVUH7eL3Z1_5KszUg4tiEwkVaYdoJs-hnzeTmRoC8ZwQAvD_BwE"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product6.jpg"
+              alt="NARS Radiant Creamy Concealer"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Too Faced Better Than Sex Mascara</h2>
+            <p>Price: $28.00</p>
+            <p>
+              <a
+                href="https://www.toofaced.com/product/23484/59115/eye-makeup/mascara/better-than-sex-volumizing-mascara/1-selling-prestige-mascara-in-america"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product7.jpg"
+              alt="Too Faced Better Than Sex Mascara"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>e.l.f. Cosmetics Bite-Size Eyeshadow Palette</h2>
+            <p>Price: $3.00</p>
+            <p>
+              <a
+                href="https://www.elfcosmetics.com/en_CA/eyes?gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOAO0_bKSyIGyHgtw2Vi9yfIAzMaSimiawroxqbGQx5qfc_rg64qVKxoCH0wQAvD_BwE&gclsrc=aw.ds"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product8.jpg"
+              alt="e.l.f. Bite-Size Eyeshadow Palette"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Glossier Cloud Paint Blush</h2>
+            <p>Price: $20.00</p>
+            <p>
+              <a
+                href="https://www.sephora.com/ca/en/product/glossier-cloud-paint-gel-cream-blush-P504521?om_mmc=ppc-GG_19641358513_146114975735_aud-2267900293626:dsa-1974623357724__646853619119_9000437_c&country_switch=ca&lang=en&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOJ9hozuti_O7ov-vzUGOPcek7E2j60JDQwSw1W1XPa9PprAM4N9EdRoC07MQAvD_BwE&gclsrc=aw.ds"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product9.jpg"
+              alt="Glossier Cloud Paint Blush"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Benefit Cosmetics Hoola Matte Bronzer</h2>
+            <p>Price: $35.00</p>
+            <p>
+              <a
+                href="https://www.sephora.com/ca/fr/product/hoola-matte-bronzer-P290636"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product10.jpg"
+              alt="Benefit Hoola Bronzer"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Milani Baked Blush in Luminoso</h2>
+            <p>Price: $10.99</p>
+            <p>
+              <a
+                href="https://www.milanicosmetics.com/products/baked-blush?srsltid=AfmBOooGPC0Ba2YtC_OjJ6CZvWY9GRJCC2C_WEEWd_hQhSSTKwFL99yi"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img src="images/Makeup/product11.jpg" alt="Milani Baked Blush" />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Anastasia Beverly Hills Dipbrow Pomade</h2>
+            <p>Price: $21.00</p>
+            <p>
+              <a
+                href="https://www.anastasiabeverlyhills.com/products/dipbrow-pomade"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img src="images/Makeup/product12.jpg" alt="ABH Dipbrow Pomade" />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>MAC Cosmetics Ruby Woo Lipstick</h2>
+            <p>Price: $25.00</p>
+            <p>
+              <a
+                href="https://www.sephora.com/ca/en/brand/mac-cosmetics/lipstick"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product13.jpg"
+              alt="MAC Ruby Woo Lipstick"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>IT Cosmetics CC+ Cream</h2>
+            <p>Price: $44.00</p>
+            <p>
+              <a
+                href="https://www.itcosmetics.ca/?utm_content=paidsearch&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltODq6HGImsBYLIDsH79jQ3P4m6unR7RyV81GyWShR4t8blD_Rz2AA3hoC7fwQAvD_BwE"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product14.jpg"
+              alt="IT Cosmetics CC+ Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Huda Beauty Easy Bake Loose Setting Powder</h2>
+            <p>Price: $38.00</p>
+            <p>
+              <a
+                href="https://www.sephora.com/ca/en/product/easy-bake-loose-baking-setting-powder-P433402?om_mmc=ppc-GG_6572578267_82765568870_aud-2267900291666:dsa-824755878871__426714375592_9000437_c&country_switch=ca&lang=en&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOERx7GFUIicJAakLEn-b3gXZqWW7eAjkzmqBWk764_h580Hc5ulG5RoCRtUQAvD_BwE&gclsrc=aw.ds"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product15.jpg"
+              alt="Huda Beauty Setting Powder"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Pat McGrath Labs Mothership Eyeshadow Palette</h2>
+            <p>Price: $128.00</p>
+            <p>
+              <a
+                href="https://www.patmcgrath.com/collections/motherships?srsltid=AfmBOoqdtadTZcg7H9xPBKE8PSPlGL8auDUJQNUd8vkDygkW8NFgAQgj"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Makeup/product16.jpg"
+              alt="Pat McGrath Mothership Palette"
+            />
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Left Section: Image -->
+        <div class="footer-left">
+          <img src="images/image4.jpg" alt="Logo" />
+        </div>
+
+        <!-- Center Section: Titles with Links -->
+        <div class="footer-center">
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="hair.html">Haircare</a></li>
+              <li><a href="skin.html">Skincare</a></li>
+              <li><a href="makeup.html">Makeup</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="review.html">Leave a Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 PurelyAya. All rights reserved.</p>
+        <!-- Logos at the bottom right -->
+        <div class="footer-logos">
+          <ul class="logos">
+            <li><img src="images/logos/twitter.png" alt="Logo 1" /></li>
+            <li><img src="images/logos/instagram.png" alt="Logo 2" /></li>
+            <li><img src="images/logos/facebook.png" alt="Logo 3" /></li>
+            <li><img src="images/logos/youtube.png" alt="Logo 4" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="scriptSkinMakHair.js"></script>
+  </body>
+</html>

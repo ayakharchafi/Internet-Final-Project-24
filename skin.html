@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PurelyAya - Skincare Products</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-title">PurelyAya</div>
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item">HOME</a>
+          <div class="dropdown">
+            <a href="#" class="nav-item">BEST OF BEAUTY</a>
+            <div class="dropdown-content">
+              <a href="beautyAwards.html">BEAUTY AWARDS</a>
+              <a href="trendyProducts.html">TRENDY PRODUCTS</a>
+              <a href="beautyTips.html">BEAUTY TIPS</a>
+            </div>
+          </div>
+          <a href="skin.html" class="nav-item">SKIN</a>
+          <a href="makeup.html" class="nav-item">MAKEUP</a>
+          <a href="hair.html" class="nav-item">HAIR</a>
+          <a href="aboutUs.html" class="nav-item">ABOUT</a>
+        </nav>
+        <a href="signIn.html" class="button-SignIn">Sign In</a>
+        <a href="signUp.html" class="button-SignUp">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="skin-main">
+      <section class="skin-page">
+        <h1>Skincare Products</h1>
+
+        <!-- Search Bar and Filters -->
+        <div class="search-filters">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            onkeyup="filterProducts()"
+          />
+          <div class="filters">
+            <label for="priceRange">Price Range:</label>
+            <select
+              class="priceRange"
+              id="priceRange"
+              onchange="filterProducts()"
+            >
+              <option value="">All Prices</option>
+              <option value="low">Low to High</option>
+              <option value="high">High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="skin-product-container" id="productList">
+          <article class="skin-product-item">
+            <h2>CeraVe Hydrating Facial Cleanser</h2>
+            <p>Price: $12.99</p>
+            <p>
+              <a
+                href="https://www.cerave.ca/en-ca/skincare/cleansers/hydrating-facial-cleanser"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product1.jpg"
+              alt="CeraVe Hydrating Facial Cleanser"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Neutrogena Hydro Boost Gel Cream</h2>
+            <p>Price: $19.99</p>
+            <p>
+              <a
+                href="https://www.neutrogena.ca/face/moisturizer-hydration-serum/neutrogena-hydro-boost-gel-cream"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product2.jpg"
+              alt="Neutrogena Hydro Boost Gel Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>La Roche-Posay Toleriane Double Repair Face Moisturizer</h2>
+            <p>Price: $19.99</p>
+            <p>
+              <a
+                href="https://www.laroche-posay.ca/fr_CA/nos-produits?gclsrc=aw.ds&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOGiiGeMLm-ByQxgN-vOArdkJdA4_s1A_0Hwq36zNKkArBEhKvcgA6BoCrIsQAvD_BwE"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product3.jpg"
+              alt="La Roche-Posay Toleriane Moisturizer"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Paula’s Choice 2% BHA Liquid Exfoliant</h2>
+            <p>Price: $32.00</p>
+            <p>
+              <a
+                href="https://www.paulaschoice.com/exfoliants-and-toners?g_adid=707440290194&g_network=g&g_campaign=na-ca%7Cgoogle%7Csearch%7Cbranded%7Cnew%7Cproduct%7Ccn&g_adgroupid=133678950429&g_keywordid=kwd-12844216164&g_acctid=994-507-0581&g_adtype=search&g_keyword=paula%27s%20choice%20bha%20liquid&g_campaignid=16495114543&p=20FSOFF&utm_source=google&utm_medium=cpc&utm_campaign=na-ca|google|search|branded|new|product_exact|cn&utm_term=16495114543&utm_content=133678950429&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOJH2JF77ntna8TuEUeU30UzXJ0HQ_TSLUTmun-47ufkJ6RmDa2CFCRoCmagQAvD_BwE"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product4.jpg"
+              alt="Paula’s Choice 2% BHA Liquid Exfoliant"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Drunk Elephant Protini Polypeptide Cream</h2>
+            <p>Price: $68.00</p>
+            <p>
+              <a
+                href="https://www.drunkelephant.ca/collections/moisturizers/protini-polypeptide-cream-999DE00000103.html?utm_source=PaidSearch&utm_medium=LowerFunnel&utm_campaign=2024Q3_Brand_Moisturizers_Protini&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOAx21yClOXNMEUDRixnh9L4LCrftKOBsiNc2LtsvDJZZpn9z8pknfxoCRZEQAvD_BwE"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product5.jpg"
+              alt="Drunk Elephant Protini Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Vanicream Moisturizing Cream</h2>
+            <p>Price: $14.99</p>
+            <p>
+              <a
+                href="https://www.amazon.ca/s?k=vanicream+moisturizing+cream&hvadid=604674743885&hvdev=c&hvlocphy=9000437&hvnetw=g&hvqmt=e&hvrand=16820613434408071703&hvtargid=kwd-311844070019&hydadcr=13544_13447182&tag=googcana-20&ref=pd_sl_7qliigllk2_e"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product6.jpg"
+              alt="Vanicream Moisturizing Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Bioderma Sensibio H2O Micellar Water</h2>
+            <p>Price: $14.90</p>
+            <p>
+              <a
+                href="https://www.amazon.ca/s?k=bioderma+sensibio+micellar&hvadid=600569918303&hvdev=c&hvlocphy=9000437&hvnetw=g&hvqmt=e&hvrand=7355439943938158545&hvtargid=kwd-361679021164&hydadcr=21565_13373552&tag=googcana-20&ref=pd_sl_78u20r6vpr_e"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product7.jpg"
+              alt="Bioderma Sensibio H2O Micellar Water"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Sunday Riley Good Genes Lactic Acid Treatment</h2>
+            <p>Price: $85.00</p>
+            <p>
+              <a
+                href="https://sundayriley.com/products/good-genes-lactic-acid-treatment?srsltid=AfmBOop6jGXhYAKFsACNPbA0TFmQYM3WQksne0BbcrcO7bi4x3F6Kuui"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product8.jpg"
+              alt="Sunday Riley Good Genes"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Olay Regenerist Micro-Sculpting Cream</h2>
+            <p>Price: $29.99</p>
+            <p>
+              <a
+                href="https://www.olay.ca/en-ca/skin-care-products/regenerist-micro-sculpting-cream"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product9.jpg"
+              alt="Olay Regenerist Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Pixi Glow Tonic</h2>
+            <p>Price: $15.00</p>
+            <p>
+              <a
+                href="https://ca.pixibeauty.com/products/glow-tonic-250ml?srsltid=AfmBOoqsNvs4Y8MNASkXHNxubLlFzY-1NB8CrbyxTcRlbFdldjiyfN8b&shpxid=ee81d910-042e-46a2-8202-c86f4f4703d0"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img src="images/Skincare/product10.jpg" alt="Pixi Glow Tonic" />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>The Ordinary Hyaluronic Acid 2% + B5</h2>
+            <p>Price: $8.90</p>
+            <p>
+              <a
+                href="https://theordinary.com/en-ca/hyaluronic-acid-2-b5-serum-with-ceramides-100637.html"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product11.jpg"
+              alt="The Ordinary Hyaluronic Acid"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>First Aid Beauty Ultra Repair Cream</h2>
+            <p>Price: $36.00</p>
+            <p>
+              <a
+                href="https://www.firstaidbeauty.com/products/ultra-repair-cream-intense-hydration?srsltid=AfmBOooUPC0jA2fMAXeZ8cDl_NKsJf6RoEK6Sp6keLD2FTDk4l46rt25"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product12.jpg"
+              alt="First Aid Beauty Ultra Repair Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>EltaMD UV Clear Broad-Spectrum SPF 46</h2>
+            <p>Price: $39.00</p>
+            <p>
+              <a
+                href="https://www.amazon.ca/s?k=elta+md+spf+46+uv+clear&hvadid=667162669679&hvdev=c&hvlocphy=9000437&hvnetw=g&hvqmt=e&hvrand=6624883657065727228&hvtargid=kwd-331810227770&hydadcr=23311_13656862&tag=googcana-20&ref=pd_sl_82ol2vwc0g_e"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product13.jpg"
+              alt="EltaMD UV Clear SPF 46"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Tatcha The Water Cream</h2>
+            <p>Price: $69.00</p>
+            <p>
+              <a
+                href="https://www.sephora.com/ca/en/brand/tatcha"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product14.jpg"
+              alt="Tatcha The Water Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Mario Badescu Drying Lotion</h2>
+            <p>Price: $17.00</p>
+            <p>
+              <a
+                href="https://www.mariobadescu.com/products/drying-lotion?srsltid=AfmBOor-yMkLKBiPFCEsqSa98JJjF2pnV5VkA7r-p02yH8rB24iMClDj"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product15.jpg"
+              alt="Mario Badescu Drying Lotion"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Kiehl’s Midnight Recovery Concentrate</h2>
+            <p>Price: $52.00</p>
+            <p>
+              <a
+                href="https://www.kiehls.ca/en/skincare-face/midnight-recovery-concentrate/819.html?dwvar_819_size=100ML&gclsrc=aw.ds&gad_source=1&gclid=CjwKCAiA9IC6BhA3EiwAsbltOF12qn7oFOVXzWiFgFe2mEJnhUOONCJqPC5HX9NDZPxWkQnXKxq3exoCx7sQAvD_BwE"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/Skincare/product16.jpg"
+              alt="Kiehl’s Midnight Recovery"
+            />
+          </article>
+        </div>
+      </section>
+
+      <section class="skin-share-experience">
+        <h1>Share Your Beauty Experience</h1>
+        <p>
+          Love a product or have a beauty tip? Share your expereience! Help
+          others find their next skincare or makeup favorite by leaving a
+          review. Your insights make all the difference!
+        </p>
+        <form class="skin-form-review" action="review.html">
+          <button class="shareReview-Btn" href="review.html">
+            Share your experience
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <img src="images/image4.jpg" alt="Logo" />
+        </div>
+        <div class="footer-center">
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="hair.html">Haircare</a></li>
+              <li><a href="skin.html">Skincare</a></li>
+              <li><a href="makeup.html">Makeup</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="review.html">Leave a Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PurelyAya. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="scriptSkinMakHair.js"></script>
+  </body>
+</html>

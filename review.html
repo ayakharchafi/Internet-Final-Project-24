@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PurelyAya - Submit a Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <!-- <img src="/images/logo3.png" alt="Logo" class="header-logo" />-->
+      <div class="header-title">PurelyAya</div>
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item">HOME</a>
+          <!-- Link to the main page -->
+          <div class="dropdown">
+            <a href="#" class="nav-item">BEST OF BEAUTY</a>
+            <div class="dropdown-content">
+              <a href="beautyAwards.html">BEAUTY AWARDS</a>
+              <a href="trendyProducts.html">TRENDY PRODUCTS</a>
+              <a href="beautyTips.html">BEAUTY TIPS</a>
+            </div>
+          </div>
+          <a href="skin.html" class="nav-item">SKIN</a>
+          <a href="makeup.html" class="nav-item">MAKEUP</a>
+          <a href="hair.html" class="nav-item">HAIR</a>
+          <a href="aboutUs.html" class="nav-item">ABOUT</a>
+        </nav>
+        <a href="signIn.html" class="button-SignIn">Sign In</a>
+        <a href="signUp.html" class="button-SignUp">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="review-main">
+      <div class="review-form-container">
+        <h1 class="review-h1">Submit Your Review</h1>
+        <form
+          class="review-form"
+          action="confirmation.html"
+          method="get"
+          target="_blank"
+          onsubmit="setReviewCookies(),saveReviewToSession();"
+        >
+          <div class="review-input-container">
+            <input
+              type="text"
+              name="FullName"
+              id="fullName"
+              placeholder="Full Name"
+              required
+            />
+          </div>
+
+          <div class="review-input-container">
+            <input
+              type="email"
+              name="Email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+
+          <div class="review-input-container">
+            <textarea
+              name="Review"
+              id="review"
+              placeholder="Write your review here.."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <button class="review-button-submit" type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Left Section: Image -->
+        <div class="footer-left">
+          <img src="images/image4.jpg" alt="Logo" />
+        </div>
+
+        <!-- Center Section: Titles with Links -->
+        <div class="footer-center">
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="hair.html">Haircare</a></li>
+              <li><a href="skin.html">Skincare</a></li>
+              <li><a href="makeup.html">Makeup</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="review.html">Leave a Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 PurelyAya. All rights reserved.</p>
+        <!-- Logos at the bottom right -->
+        <div class="footer-logos">
+          <ul class="logos">
+            <li><img src="images/logos/twitter.png" alt="Logo 1" /></li>
+            <li><img src="images/logos/instagram.png" alt="Logo 2" /></li>
+            <li><img src="images/logos/facebook.png" alt="Logo 3" /></li>
+            <li><img src="images/logos/youtube.png" alt="Logo 4" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function setReviewCookies() {
+        document.cookie =
+          "fullName=" +
+          encodeURIComponent(document.getElementById("fullName").value);
+        document.cookie =
+          "email=" + encodeURIComponent(document.getElementById("email").value);
+        document.cookie =
+          "review=" +
+          encodeURIComponent(document.getElementById("review").value);
+        function saveReviewToSession() {
+          sessionStorage.setItem(
+            "reviewFullName",
+            document.getElementById("fullName").value
+          );
+          sessionStorage.setItem(
+            "reviewEmail",
+            document.getElementById("email").value
+          );
+          sessionStorage.setItem(
+            "reviewText",
+            document.getElementById("review").value
+          );
+        }
+      }
+      window.onload = function () {
+        // Check if any review data exists in sessionStorage
+        if (
+          sessionStorage.getItem("reviewFullName") ||
+          sessionStorage.getItem("reviewEmail") ||
+          sessionStorage.getItem("reviewText")
+        ) {
+          // Reset the form fields if data is found
+          document.getElementById("fullName").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("review").value = "";
+        }
+      };
+    </script>
+  </body>
+</html>

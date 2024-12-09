@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PurelyAya - Haircare products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-title">PurelyAya</div>
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item">HOME</a>
+          <!-- Link to the main page -->
+          <div class="dropdown">
+            <a href="#" class="nav-item">BEST OF BEAUTY</a>
+            <div class="dropdown-content">
+              <a href="beautyAwards.html">BEAUTY AWARDS</a>
+              <a href="trendyProducts.html">TRENDY PRODUCTS</a>
+              <a href="beautyTips.html">BEAUTY TIPS</a>
+            </div>
+          </div>
+          <a href="skin.html" class="nav-item">SKIN</a>
+          <a href="makeup.html" class="nav-item">MAKEUP</a>
+          <a href="hair.html" class="nav-item">HAIR</a>
+          <a href="aboutUs.html" class="nav-item">ABOUT</a>
+        </nav>
+        <a href="signIn.html" class="button-SignIn">Sign In</a>
+        <a href="signUp.html" class="button-SignUp">Sign Up</a>
+      </div>
+    </header>
+    <main class="skin-main">
+      <section class="skin-page">
+        <h1>Haircare Products</h1>
+
+        <!-- Search Bar and Filters -->
+        <div class="search-filters">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+            onkeyup="filterProducts()"
+          />
+          <div class="filters">
+            <label for="priceRange">Price Range:</label>
+            <select
+              class="priceRange"
+              id="priceRange"
+              onchange="filterProducts()"
+            >
+              <option value="">All Prices</option>
+              <option value="low">Low to High</option>
+              <option value="high">High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="skin-product-container" id="productList">
+          <!-- Product 1 -->
+          <article class="skin-product-item">
+            <h2>Olaplex No. 3 Hair Perfector</h2>
+            <p>Price: $28.00</p>
+            <p>
+              <a
+                href="https://www.olaplex.com/products/no-3-hair-perfector"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product1.jpg"
+              alt="Olaplex No. 3 Hair Perfector"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Moroccanoil Treatment</h2>
+            <p>Price: $44.00</p>
+            <p>
+              <a
+                href="https://www.moroccanoil.com/us_en/moroccanoil-treatment"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product2.jpg"
+              alt="Moroccanoil Treatment"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Living Proof Perfect Hair Day Dry Shampoo</h2>
+            <p>Price: $28.00</p>
+            <p>
+              <a
+                href="https://www.livingproof.com/perfect-hair-day-dry-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product3.jpg"
+              alt="Living Proof Dry Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Redken Extreme Length Shampoo</h2>
+            <p>Price: $22.00</p>
+            <p>
+              <a
+                href="https://www.redken.com/products/shampoo/extreme-length-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product4.jpg"
+              alt="Redken Extreme Length Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Kenra Professional Volume Spray 25</h2>
+            <p>Price: $19.00</p>
+            <p>
+              <a
+                href="https://www.kenraprofessional.com/volume-spray-25"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product5.jpg"
+              alt="Kenra Volume Spray 25"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>
+              SheaMoisture Jamaican Black Castor Oil Strengthen & Restore
+              Shampoo
+            </h2>
+            <p>Price: $10.99</p>
+            <p>
+              <a
+                href="https://www.sheamoisture.com/jamaican-black-castor-oil-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product6.jpg"
+              alt="SheaMoisture Jamaican Black Castor Oil Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Paul Mitchell Tea Tree Special Shampoo</h2>
+            <p>Price: $15.00</p>
+            <p>
+              <a
+                href="https://www.paulmitchell.com/tea-tree-special-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product7.jpg"
+              alt="Paul Mitchell Tea Tree Special Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Biolage Colorlast Shampoo</h2>
+            <p>Price: $18.00</p>
+            <p>
+              <a
+                href="https://www.biolage.com/products/colorlast-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product8.jpg"
+              alt="Biolage Colorlast Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Ouai Haircare Leave-In Conditioner</h2>
+            <p>Price: $26.00</p>
+            <p>
+              <a
+                href="https://theouai.com/products/leave-in-conditioner"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product9.jpg"
+              alt="Ouai Haircare Leave-In Conditioner"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Amika The Kure Bond Repair Shampoo</h2>
+            <p>Price: $25.00</p>
+            <p>
+              <a
+                href="https://www.amika.com/products/the-kure-bond-repair-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product10.jpg"
+              alt="Amika The Kure Bond Repair Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>
+              Alterna Haircare Caviar Anti-Aging Replenishing Moisture Shampoo
+            </h2>
+            <p>Price: $38.00</p>
+            <p>
+              <a
+                href="https://www.alternahaircare.com/caviar-anti-aging-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product11.jpg"
+              alt="Alterna Caviar Anti-Aging Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>John Frieda Frizz Ease Extra Strength Serum</h2>
+            <p>Price: $9.99</p>
+            <p>
+              <a
+                href="https://www.johnfrieda.com/us/product/frizz-ease-extra-strength-serum"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product12.jpg"
+              alt="John Frieda Frizz Ease Serum"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Living Proof No Frizz Nourishing Styling Cream</h2>
+            <p>Price: $28.00</p>
+            <p>
+              <a
+                href="https://www.livingproof.com/no-frizz-nourishing-styling-cream"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product13.jpg"
+              alt="Living Proof No Frizz Styling Cream"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>R+Co Bleu Superfruit Leave-In Conditioner</h2>
+            <p>Price: $28.00</p>
+            <p>
+              <a
+                href="https://www.randcobeauty.com/bleu-superfruit-leave-in-conditioner"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product14.jpg"
+              alt="R+Co Bleu Leave-In Conditioner"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Pureology Hydrate Shampoo</h2>
+            <p>Price: $32.00</p>
+            <p>
+              <a
+                href="https://www.pureology.com/hydrate-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product15.jpg"
+              alt="Pureology Hydrate Shampoo"
+            />
+          </article>
+
+          <article class="skin-product-item">
+            <h2>Redken All Soft Shampoo</h2>
+            <p>Price: $19.00</p>
+            <p>
+              <a
+                href="https://www.redken.com/products/shampoo/all-soft-shampoo"
+                target="_blank"
+                >View Product</a
+              >
+            </p>
+            <img
+              src="images/HairCare/product16.jpg"
+              alt="Redken All Soft Shampoo"
+            />
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Left Section: Image -->
+        <div class="footer-left">
+          <img src="images/image4.jpg" alt="Logo" />
+        </div>
+
+        <!-- Center Section: Titles with Links -->
+        <div class="footer-center">
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="hair.html">Haircare</a></li>
+              <li><a href="skin.html">Skincare</a></li>
+              <li><a href="makeup.html">Makeup</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="review.html">Leave a Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 PurelyAya. All rights reserved.</p>
+        <!-- Logos at the bottom right -->
+        <div class="footer-logos">
+          <ul class="logos">
+            <li><img src="images/logos/twitter.png" alt="Logo 1" /></li>
+            <li><img src="images/logos/instagram.png" alt="Logo 2" /></li>
+            <li><img src="images/logos/facebook.png" alt="Logo 3" /></li>
+            <li><img src="images/logos/youtube.png" alt="Logo 4" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="scriptSkinMakHair.js"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PurelyAya - Sign In</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <div class="header-title">PurelyAya</div>
+      <div class="nav-container">
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-item">HOME</a>
+          <!-- Link to the main page -->
+          <div class="dropdown">
+            <a href="#" class="nav-item">BEST OF BEAUTY</a>
+            <div class="dropdown-content">
+              <a href="beautyAwards.html">BEAUTY AWARDS</a>
+              <a href="trendyProducts.html">TRENDY PRODUCTS</a>
+              <a href="beautyTips.html">BEAUTY TIPS</a>
+            </div>
+          </div>
+          <a href="skin.html" class="nav-item">SKIN</a>
+          <a href="makeup.html" class="nav-item">MAKEUP</a>
+          <a href="hair.html" class="nav-item">HAIR</a>
+          <a href="aboutUs.html" class="nav-item">ABOUT</a>
+        </nav>
+        <a href="signIn.html" class="button-SignIn">Sign In</a>
+        <a href="signUp.html" class="button-SignUp">Sign Up</a>
+      </div>
+    </header>
+
+    <main class="signIn-main">
+      <div class="signIn-form-container">
+        <h1 class="signIn-h1">Sign In</h1>
+        <h2 class="signIn-h2">Access your account by signing in below.</h2>
+        <form id="signInForm" onsubmit="return handleSignIn(event)">
+          <div class="signIn-input-container">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="signIn-input-container">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <div class="signIn-button-container">
+            <button type="submit" class="button-signin">Sign In</button>
+            <a href="signUp.html" class="button-signup">Sign Up</a>
+          </div>
+          <p class="forgot-password">
+            Forgot your password?
+            <a href="#" onclick="handleResetPassword()">Reset it here</a>
+          </p>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Left Section: Image -->
+        <div class="footer-left">
+          <img src="images/image4.jpg" alt="Logo" />
+        </div>
+
+        <!-- Center Section: Titles with Links -->
+        <div class="footer-center">
+          <div class="footer-section">
+            <h3>Products</h3>
+            <ul>
+              <li><a href="hair.html">Haircare</a></li>
+              <li><a href="skin.html">Skincare</a></li>
+              <li><a href="makeup.html">Makeup</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="review.html">Leave a Review</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="aboutUs.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom: Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2024 PurelyAya. All rights reserved.</p>
+        <!-- Logos at the bottom right -->
+        <div class="footer-logos">
+          <ul class="logos">
+            <li><img src="images/logos/twitter.png" alt="Logo 1" /></li>
+            <li><img src="images/logos/instagram.png" alt="Logo 2" /></li>
+            <li><img src="images/logos/facebook.png" alt="Logo 3" /></li>
+            <li><img src="images/logos/youtube.png" alt="Logo 4" /></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

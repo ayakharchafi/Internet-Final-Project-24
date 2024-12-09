@@ -1,0 +1,1154 @@
+/* HEADER FOR ALL PAGES */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.nav-menu {
+    display: flex;
+    gap: 150px; 
+    margin-right:30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    position: relative;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f4f4f4;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.button-SignIn, .button-SignUp {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #d358aa;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-SignIn:hover, .button-SignUp:hover {
+    background-color: #b30077;
+}
+/* FOOTER FOR ALL PAGES */
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.footer-left img {
+    width: 300px; 
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid #000000;
+}
+
+.footer-center {
+    display: flex;
+    justify-content: space-evenly; 
+    gap: 10px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-section ul li a:hover {
+    color: #e03f9a;
+    font-weight: bold;
+
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.footer-logos {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.footer-logos .logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logos .logos li {
+    list-style: none;
+}
+
+.footer-logos .logos img {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+}
+/* INDEX PAGE */
+.index-main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.index-h1 {
+    font-size: 32px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.index-h2 {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.index-main-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    border: 2px solid #000000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+/* Container for the carousel */
+.index-product-carousel {
+    text-align: center;
+    padding: 20px;
+  }
+
+/* The carousel container with all product items */
+.index-carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+.carousel_track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+/* Each product item */
+.index-product-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+
+  .index-product-item img {
+    width: 200px; /* Set your desired width */
+    height: 200px; /* Set your desired height */
+    object-fit: cover; /* Ensures the image covers the area while maintaining aspect ratio */
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .index-product-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  .index-product-price {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .index-product-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f073c8;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+
+  .index-product-btn:hover {
+    background-color: #bf3c91;
+  }
+  
+  /* Navigation Buttons */
+  .carousel-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .prev-button, .next-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .prev-button:hover, .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .prev-button {
+    position: absolute;
+    left: 10px;
+  }
+  
+  .next-button {
+    position: absolute;
+    right: 10px;
+  }
+  
+  /* Ensure Buttons Don't Move */
+  .carousel-navigation button {
+    position: fixed;
+  }
+  
+/* Sign In page */
+/* Main Section */
+.signIn-main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.signIn-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.signIn-h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.signIn-h2 {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.signIn-input-container {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.signIn-input-container label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.signIn-input-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+}
+
+.signIn-input-container input:focus {
+    outline: none;
+    border-color: #d358aa;
+    box-shadow: 0 0 5px rgba(211, 88, 170, 0.5);
+}
+
+.signIn-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-signin, .button-signup {
+    padding: 12px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d358aa;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-signin:hover, .button-signup:hover {
+    background-color: #b30077;
+}
+
+.forgot-password {
+    font-size: 14px;
+    color: #888;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    color: #d358aa;
+    text-decoration: underline;
+}
+/* Review page */
+/* Main Section */
+.review-main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.review-form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.review-h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.review-input-container {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.review-input-container input,
+.review-input-container textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-input-container input:focus,
+.review-input-container textarea:focus {
+    outline: none;
+    border-color: #d358aa;
+    box-shadow: 0 0 8px rgba(211, 88, 170, 0.3);
+}
+
+.review-input-container textarea {
+    resize: vertical;
+}
+
+.review-button-submit {
+    padding: 14px 0;
+    font-size: 16px;
+    color: #fff;
+    background-color: #d358aa;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.review-button-submit:hover {
+    background-color: #b30077;
+}
+
+.review-button-submit:focus {
+    outline: none;
+}
+
+.review-form p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+/* about us page */
+/* Styling for main content container */
+.about-main {
+    padding: 20px;
+}
+
+/* Our Story Section Styling */
+
+.about-our-story{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;  
+}
+.about-story-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-story-heading {
+    font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Text and Image Container Styling */
+.about-story-text-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+
+.about-story-text {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+.about-story-image-container{
+    border: 5px solid #d43da7; 
+    border-radius: 10px; 
+    overflow: hidden;
+    width: 400px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.about-story-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+/* Our Mission Section Styling */
+.about-our-mission {
+    background-color: #f8f8f8; /* Light beige background */
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1600px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+}
+.about-mission-content a {
+    color: #4a4e69; /* Match link color to theme */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.about-mission-content a:hover {
+    text-decoration: underline;
+    color: #22223b; /* Darker shade on hover */
+}
+
+.about-mission-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: #d43da7; /* Soft dark purple */
+    margin-bottom: 20px;
+}
+
+.about-mission-text {
+    font-size: 1.2em;
+    color: #000000;
+    line-height: 1.8;
+}
+#quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #000000; /* Deep gray */
+    margin: 20px 0;
+}
+
+#author {
+    font-size: 16px;
+    color: #b9adb7; /* Muted purple */
+    margin-bottom: 20px;
+}
+
+#newQuote {
+    background-color: #d43da7; /* Soft pinkish-beige */
+    color: #ffffff; /* Off-white text */
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#newQuote:hover {
+    background-color: #ac27a1; /* Darker purple */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+
+.about-hours h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about-hours p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.about-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-hours li {
+    font-size: 14px;
+    color: #333;
+    padding: 5px 0;
+}
+
+/* Location Map Section Styling */
+
+
+.about-map-title {
+    margin: 0; /* Remove default margin */
+    font-size: 2rem; /* Adjust title font size */
+    color: #333; /
+}
+.about-location-map {
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Add space between the map and hours */
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px; /* Add space between the map and hours */
+    padding: 20px;
+}
+
+.about-map-container {
+    flex: 1; /* Take up equal space */
+    min-width: 300px; /* Prevent shrinking too much */
+    display: flex; /* Use Flexbox to stack the title and iframe */
+    flex-direction: column; /* Stack title and iframe vertically */
+    gap: 10px; /* Space between the title and iframe */
+    text-align: center;
+}
+
+.about-hours {
+    align-self: flex-start; /* Align the hours div to the top of the container */
+    flex-basis: 300px; /* Match the iframe's height */
+    min-width: 300px; /* Ensure a minimum width */
+    max-width: 400px; /* Optional: Add a maximum width */
+    padding: 20px;
+    background-color: #fff; /* Optional: Add background color */
+    border: 1px solid #ccc; /* Optional: Add a border */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    display: flex; /* Use Flexbox to center content */
+    flex-direction: column; /* Stack content */
+    justify-content: center; /* Center content vertically */
+    text-align: center;
+   
+}
+iframe {
+    width: 100%; /* Make the iframe responsive */
+    height: 300px; /* Fixed height for the iframe */
+    border-radius: 10px;
+    border: 4px solid #d43da7;
+  }
+/* beauty tips page */
+/* Styling for the firstSec */
+.tips-firstSec {
+    padding: 40px 20px;
+    margin: 0 auto; 
+    text-align: center; 
+    background-color: #f4f4f4; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 1200px; 
+  }
+  
+  /* Styling for date and title within firstSec */
+  .tips-firstSec p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px; 
+  }
+  
+  .tips-firstSec h1 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #333;
+  }
+  .tips-flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .tips-beauty-tip {
+    
+    margin: 20px auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+  }
+  
+  /* Styling for the tip images */
+  .tips-tip-image {
+    width: 300px; 
+    height: 300px; 
+    margin: 10px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    border: 5px solid #f28fe0; 
+    border-radius: 10px;
+  }
+  
+  /* Styling for tip headings and paragraphs */
+  .tips-beauty-tip h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  .tips-beauty-tip p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6; 
+    text-align: center;
+  }
+/* BEAUTY AWARDS PAGE */
+/* Header styling */
+.awards-body{
+    margin: 0;
+    color: #333; 
+}
+.awards-header {
+    text-align: center;
+  padding: 20px;
+  background-color: #fef4f8;
+  border-bottom: 2px solid #e3d1e2;
+}
+
+.awards-title {
+    font-size: 2.5rem;
+    color: #de2f9e;
+    margin: 0;
+}
+.awards-subtitle{
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #555; 
+}
+
+/* Product container styling */
+.awards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.awards-product {
+    border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+}
+
+.awards-product:hover {
+    transform: translateY(-5px);
+}
+.awards-product-image{
+    width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0 auto; 
+  display: block; 
+ 
+}
+
+.awards-product-details {
+    padding: 15px;
+}
+
+.awards-product-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #222;
+}
+.awards-product-description{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.awards-product-price {
+    font-size: 1.1rem;
+    color: #de2f9e;
+    font-weight: bold;
+  }
+  .awards-product-buy-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #de2f9e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .awards-product-buy-button:hover {
+    background-color: #af2a7f;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .awards-product {
+      width: 100%;
+    }
+  }
+
+/* trendy products page */
+/* Main content container */
+.trendy-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    color: #333;
+}
+
+/* Section headers */
+.trendy-section-header {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Product grid */
+.trendy-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Product item card */
+.trendy-product-item {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+/* Product hover effect */
+.trendy-product-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Product images */
+.trendy-product-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: opacity 0.3s;
+}
+
+.trendy-product-item:hover img {
+    opacity: 0.9;
+}
+
+/* Product title */
+.trendy-product-title {
+    font-size: 1.5rem;
+    color: #444;
+    margin: 15px 0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.trendy-product-item:hover .trendy-product-title {
+    color: #c92a91;
+}
+
+/* Product description */
+.trendy-product-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Product price */
+.trendy-product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* View Product button */
+.trendy-product-link {
+    text-decoration: none;
+    background-color: #ec75be;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.trendy-product-link:hover {
+    background-color: #bb2789;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .trendy-section-header {
+        font-size: 2rem;
+    }
+
+    .trendy-product-price {
+        font-size: 1rem;
+    }
+}
+/* skin page */
+/*share your beauty experience*/
+.skin-share-experience {
+    text-align: center; 
+    background-color: #f9f9f9; 
+    padding: 30px; 
+    border-radius: 10px; 
+    margin: 20px auto; 
+    max-width: 800px; 
+  }
+  
+  .skin-share-experience h1 {
+    font-size: 2rem;
+    margin-bottom: 15px; 
+    color: #333; 
+  }
+  
+  .skin-share-experience p {
+    font-size: 1.2rem;
+    margin-bottom: 20px; 
+    color: #666; 
+  }
+  
+  .shareReview-Btn {
+    font-size: 1rem; 
+    padding: 10px 20px; 
+    background-color: #de56af; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .shareReview-Btn:hover {
+    background-color: #cc3db4; 
+  }
+/* General Styles */
+
+.skin-body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.skin-main h1, h2 {
+    color: #222;
+}
+
+.skin-main a {
+    text-decoration: none;
+    color: #d13e8a;
+}
+
+.skin-main a:hover {
+    color: #fbf5f8;
+    text-decoration: underline;
+}
+
+/* Main Content */
+.skin-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.skin-page h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #444;
+}
+
+/* Search Bar and Filters */
+.search-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.search-filters input[type="text"] {
+    width: 300px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.search-filters input[type="text"]:focus {
+    border-color: #e600b0;
+    box-shadow: 0 0 5px rgba(241, 44, 182, 0.5);
+}
+
+.filters select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.filters select:hover {
+    border-color: #c2307c;
+}
+
+/* Product Grid */
+.skin-product-container {
+    display: flex;
+  flex-wrap: wrap; /* Ensures that items wrap onto the next line when space is limited */
+  gap: 20px; /* Optional: Adds space between items */
+  justify-content: space-between;
+}
+
+/* Product Card */
+.skin-product-item {
+    display: flex;
+    flex-direction: column; /* Stacks children (title, price, link, image) vertically */
+    justify-content: space-between; /* Ensures equal distribution of space */
+    align-items: stretch; /* Ensures all child elements (text, images, etc.) stretch to match height */
+    width: calc(33.333% - 20px); /* Three items per row (subtract gap for proper spacing) */
+    min-height: 400px; /* Ensures items have a minimum height */
+    background-color: #ffffff; /* Optional: Adds a background color */
+    padding: 15px; /* Optional: Adds padding to the item */
+    box-sizing: border-box; /* Ensures padding is included in width/height calculation */
+    border: 1px solid #ddd; 
+}
+
+.skin-product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Images */
+.skin-product-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.skin-product-item:hover img {
+    opacity: 0.9;
+}
+.skin-product-item h2, .skin-product-item p, .skin-product-item a {
+    margin: 10px 0; /* Adds spacing between the title, price, and button */
+    text-align: center; /* Optional: Centers the text */
+  }
+/* Product Titles and Descriptions */
+.skin-product-item h2 {
+    font-size: 1.5rem;
+   
+    color: #444;
+    transition: color 0.3s ease;
+}
+
+.skin-product-item:hover h2 {
+    color: #b73076;
+}
+
+.skin-product-item p {
+    font-size: 1rem;
+  
+    color: #555;
+}
+
+/* Product Links */
+.skin-product-item a {
+    display: inline-block;
+    background-color: #d841b0;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.skin-product-item a:hover {
+    background-color: #b73076;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .skin-page h1 {
+        font-size: 2rem;
+    }
+
+    .search-filters input[type="text"],
+    .filters select {
+        width: 100%;
+    }
+
+    .skin-product-item h2 {
+        font-size: 1.3rem;
+    }
+}
+/* Media query to adjust layout on smaller screens */
+@media screen and (max-width: 768px) {
+    .skin-product-item {
+      width: calc(50% - 20px); /* Two items per row on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .skin-product-item {
+      width: 100%; /* One item per row on very small screens */
+    }
+  }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PurelyAya - Customer Reviews</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .confirmation-container {
+        background-color: #ffffff;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 400px;
+        padding: 20px 30px;
+        text-align: center;
+      }
+
+      .confirmation-container h1 {
+        color: #e85cc1;
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      .confirmation-container p {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+
+      .confirmation-container .confirmation-details {
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        padding: 15px;
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .confirmation-container .confirmation-details p {
+        margin: 5px 0;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .confirmation-container .confirmation-details strong {
+        color: #333;
+      }
+
+      .confirmation-container button {
+        background-color: #e85cc1;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .confirmation-container button:hover {
+        background-color: #b03d82;
+      }
+    </style>
+  </head>
+  <body onload="displayReviewDetails()">
+    <div class="confirmation-container">
+      <h1>Thank You!</h1>
+      <p>Your review has been submitted successfully.</p>
+      <div class="confirmation-details">
+        <p><strong>Full Name:</strong> <span id="fullName"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Review:</strong> <span id="review"></span></p>
+      </div>
+      <button onclick="window.close()">Close Page</button>
+    </div>
+
+    <script>
+      function displayReviewDetails() {
+        const cookies = document.cookie.split("; ");
+        const data = {};
+        cookies.forEach((cookie) => {
+          const [key, value] = cookie.split("=");
+          data[key] = decodeURIComponent(value);
+        });
+
+        document.getElementById("fullName").innerText = data.fullName || "N/A";
+        document.getElementById("email").innerText = data.email || "N/A";
+        document.getElementById("review").innerText = data.review || "N/A";
+      }
+      window.onbeforeunload = function () {
+        // Clear the sessionStorage when the confirmation page is closed
+        sessionStorage.removeItem("reviewFullName");
+        sessionStorage.removeItem("reviewEmail");
+        sessionStorage.removeItem("reviewText");
+      };
+    </script>
+  </body>
+</html>
